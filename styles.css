@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    min-height: 100vh;
+    margin: 0;  
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;            
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;    
+    background-color: #cedbc1;  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.vertical-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;   
+    margin-bottom: 20px;
+}
+
+h3 {
+    display: block;
+    font-size: 1em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.control-button {
+    padding: 10px 15px;
+    background-color: #d48f60;
+    color: rgb(12, 11, 11);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1; 
+    margin: 0 5px; 
+}
+
+.control-button:hover {
+    background-color: #0056b3; 
+}
+
+
+.steering-symbol {
+    position: absolute; 
+    right: 10px; 
+    width: 50px; 
+    height: auto; 
+    z-index: 10; 
+}
+
+.steering-symbol img {
+    width: 100%; 
+    height: auto;
+    
+}
+
+.decks {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
+}
+
+.deck {
+    position: relative;
+    flex: 1; 
+    margin: 10px;
+    border: 1px solid #ddd0d0;
+    border-radius: 5px;
+}
+
+.selected {
+    background-color: yellow; 
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    background-color: #6c757d; 
+    border: 2px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s; 
+    margin: 5px;
+}
+
+.seat.selected {
+    background-color: #28a745; 
+    border: 2px solid #fff;
+}
+
+.seat.sold {
+    background-color: #dc3545; 
+    cursor: not-allowed; 
+}
+.single {
+    flex: 1;
+}
+
+.double {
+    flex: 2; 
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .decks {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .deck {
+        width: 100%;
+    }
+
+    .seat {
+        width: 30px;
+        height: 30px;
+    }
+}
